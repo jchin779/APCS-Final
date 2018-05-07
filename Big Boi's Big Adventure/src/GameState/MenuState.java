@@ -21,7 +21,7 @@ public class MenuState extends GameState
 
     private Font font;
 
-
+    // Constructor
     public MenuState( GameStateManager gsm )
     {
         /**
@@ -52,13 +52,13 @@ public class MenuState extends GameState
     {
     }
 
-
+    // Updates the background
     public void update()
     {
         bg.update();
     }
 
-
+    // Draws the background as well as the text with font and colors
     public void draw( Graphics2D g )
     {
         /**
@@ -89,7 +89,7 @@ public class MenuState extends GameState
 
     }
 
-
+    // Allows selection of one of three menu options
     private void select()
     {
         if ( currentChoice == 0 )
@@ -107,7 +107,7 @@ public class MenuState extends GameState
 
     }
 
-
+    // Checks for keys being pressed to cycle through menu options
     public void keyPressed( int k )
     {
         if ( k == KeyEvent.VK_ENTER )
