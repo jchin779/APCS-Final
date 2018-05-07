@@ -107,7 +107,7 @@ public abstract class MapObject
         tileSize = tm.getTileSize();
     }
 
-
+    // Checks if the two objects intersect
     public boolean intersects( MapObject o )
     {
         Rectangle r1 = getRectangle();
@@ -115,13 +115,13 @@ public abstract class MapObject
         return r1.intersects( r2 );
     }
 
-
+    // Returns a new rectangle
     public Rectangle getRectangle()
     {
         return new Rectangle( (int)x - cwidth, (int)y - cheight, cwidth, cheight );
     }
 
-
+    // Calculates the corners of the screen
     public void calculateCorners( double x, double y )
     {
 
@@ -142,7 +142,7 @@ public abstract class MapObject
 
     }
 
-
+    // Checks for collisions on the map with tiles
     public void checkTileMapCollision()
     {
 
@@ -215,94 +215,94 @@ public abstract class MapObject
 
     }
 
-
+    // Returns the x value
     public int getx()
     {
         return (int)x;
     }
 
-
+    // Returns the y value
     public int gety()
     {
         return (int)y;
     }
 
-
+    // Returns the width 
     public int getWidth()
     {
         return width;
     }
 
-
+    // Returns the height
     public int getHeight()
     {
         return height;
     }
 
-
+    // Returns the width
     public int getCWidth()
     {
         return cwidth;
     }
 
-
+    // Returns collision box height
     public int getCHeight()
     {
         return cheight;
     }
 
-
+    // Sets the position of x and y
     public void setPosition( double x, double y )
     {
         this.x = x;
         this.y = y;
     }
 
-
+    // Sets the vectors dx and dy
     public void setVector( double dx, double dy )
     {
         this.dx = dx;
         this.dy = dy;
     }
 
-
+    // Sets the map positions
     public void setMapPosition()
     {
         xmap = tileMap.getx();
         ymap = tileMap.gety();
     }
 
-
+    // Sets left movement
     public void setLeft( boolean b )
     {
         left = b;
     }
 
-
+    // Sets right movement
     public void setRight( boolean b )
     {
         right = b;
     }
 
-
+    // Sets upwards movement
     public void setUp( boolean b )
     {
         up = b;
     }
 
-
+    // Sets downwards movement
     public void setDown( boolean b )
     {
         down = b;
     }
 
-
+    // Sets jumping
     public void setJumping( boolean b )
     {
         jumping = b;
     }
 
-
+    // Checks if a point is not on the screen
     public boolean notOnScreen()
     {
         return x + xmap + width < 0 || x + xmap - width > GamePanel.WIDTH || y + ymap + height < 0
