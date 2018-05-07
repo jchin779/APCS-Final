@@ -57,7 +57,7 @@ public class TileMap
 
     private int numColsToDraw;
 
-
+    // Constructor
     public TileMap( int tileSize )
     {
         this.tileSize = tileSize;
@@ -66,7 +66,7 @@ public class TileMap
         tween = 0.07;
     }
 
-
+    // Loads the tile set from a name
     public void loadTiles( String s )
     {
 
@@ -94,7 +94,7 @@ public class TileMap
 
     }
 
-
+    // Loads the map from the name
     public void loadMap( String s )
     {
 
@@ -129,37 +129,37 @@ public class TileMap
 
     }
 
-
+    // Returns the tile size
     public int getTileSize()
     {
         return tileSize;
     }
 
-
+    // Returns the x value
     public int getx()
     {
         return (int)x;
     }
 
-
+    // Returns the y value
     public int gety()
     {
         return (int)y;
     }
 
-
+    // Returns the width
     public int getWidth()
     {
         return width;
     }
 
-
+    // Returns the height
     public int getHeight()
     {
         return height;
     }
 
-
+    // Returns the tile type at a given row and column
     public int getType( int row, int col )
     {
         int rc = map[row][col];
@@ -168,7 +168,7 @@ public class TileMap
         return tiles[r][c].getType();
     }
 
-
+    // Sets the position using the current x and y coordinates
     public void setPosition( double x, double y )
     {
 
@@ -182,7 +182,7 @@ public class TileMap
 
     }
 
-
+    // Fixes the boundaries of the image
     private void fixBounds()
     {
         if ( x < xmin )
@@ -195,7 +195,7 @@ public class TileMap
             y = ymax;
     }
 
-
+    // Draws the graphics with the tile type and at the specified position
     public void draw( Graphics2D g )
     {
 
