@@ -37,7 +37,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
     // game state manager
     private GameStateManager gsm;
 
-
+    // Constructor
     public GamePanel()
     {
         super();
@@ -47,7 +47,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 
     }
 
-
+    // 
     public void addNotify()
     {
         super.addNotify();
@@ -60,7 +60,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
         }
     }
 
-
+    // Initializes the game state manager and image
     private void init()
     {
         image = new BufferedImage( WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB );
@@ -72,7 +72,7 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
         gsm = new GameStateManager();
     }
 
-
+    // Runs the game and keeps track of run time
     public void run()
     {
 
@@ -113,19 +113,19 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
 
     }
 
-
+    // Updates the game state manager
     private void update()
     {
         gsm.update();
     }
 
-
+    // Draws the game state manager
     private void draw()
     {
         gsm.draw( g );
     }
 
-
+    // Draws the image to the screen
     private void drawToScreen()
     {
         Graphics g2 = getGraphics();
@@ -133,19 +133,19 @@ public class GamePanel extends JPanel implements Runnable, KeyListener
         g2.dispose();
     }
 
-
+    // 
     public void keyTyped( KeyEvent key )
     {
 
     }
 
-
+    // Checks if a key is pressed
     public void keyPressed( KeyEvent key )
     {
         gsm.keyPressed( key.getKeyCode() );
     }
 
-
+    // Checks if a key is released
     public void keyReleased( KeyEvent key )
     {
         gsm.keyReleased( key.getKeyCode() );
