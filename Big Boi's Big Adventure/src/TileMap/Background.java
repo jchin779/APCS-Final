@@ -22,7 +22,7 @@ public class Background
 
     private double moveScale;
 
-
+    // Constructor
     public Background( String s, double ms )
     {
         try
@@ -36,28 +36,28 @@ public class Background
         }
     }
 
-
+    // Sets the position of the game panel
     public void setPosition( double x, double y )
     {
         this.x = ( x * moveScale ) % GamePanel.WIDTH;
         this.y = ( y * moveScale ) % GamePanel.HEIGHT;
     }
 
-
+    // Sets the two vectors dx and dy
     public void setVector( double dx, double dy )
     {
         this.dx = dx;
         this.dy = dy;
     }
 
-
+    // Updates x and y with dx and dy vectors
     public void update()
     {
         x += dx;
         y += dy;
     }
 
-
+    // Draws the background image
     public void draw( Graphics2D g )
     {
         /**
@@ -86,19 +86,19 @@ public class Background
         }
     }
 
-
+    // Returns x
     public double getX()
     {
         return x;
     }
 
-
+    // Returns y
     public double getY()
     {
         return y;
     }
 
-
+    // Returns the image
     public BufferedImage getImage()
     {
         return image;

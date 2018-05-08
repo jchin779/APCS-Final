@@ -12,14 +12,14 @@ public class Level1State extends GameState
 
     private Background bg;
 
-
+    // Constructor
     public Level1State( GameStateManager gsm )
     {
         this.gsm = gsm;
         init();
     }
 
-
+    // Initializes the tile map with tile sets, map, and background
     public void init()
     {
 
@@ -37,7 +37,7 @@ public class Level1State extends GameState
     {
     }
 
-
+    // Draws the background and tile map
     public void draw( Graphics2D g )
     {
 

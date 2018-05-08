@@ -14,20 +14,20 @@ public class Tile
 
     public static final int BLOCKED = 1;
 
-
+    // Constructor
     public Tile( BufferedImage image, int type )
     {
         this.image = image;
         this.type = type;
     }
 
-
+    // Returns the image
     public BufferedImage getImage()
     {
         return image;
     }
 
-
+    // Returns the tile type
     public int getType()
     {
         return type;
