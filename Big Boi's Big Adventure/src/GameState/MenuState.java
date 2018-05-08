@@ -58,7 +58,7 @@ public class MenuState extends GameState
         bg.update();
     }
 
-    // 
+    // Draws the background with a set font and colors
     public void draw( Graphics2D g )
     {
         /**
@@ -89,7 +89,7 @@ public class MenuState extends GameState
 
     }
 
-
+    // Selects a choice on the menu screen
     private void select()
     {
         if ( currentChoice == 0 )
@@ -107,7 +107,7 @@ public class MenuState extends GameState
 
     }
 
-
+    // Checks if a key is pressed to navigate the menu
     public void keyPressed( int k )
     {
         if ( k == KeyEvent.VK_ENTER )
