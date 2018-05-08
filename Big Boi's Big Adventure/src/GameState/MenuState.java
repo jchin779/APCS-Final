@@ -21,7 +21,7 @@ public class MenuState extends GameState
 
     private Font font;
 
-
+    // Constructor
     public MenuState( GameStateManager gsm )
     {
         /**
@@ -52,13 +52,13 @@ public class MenuState extends GameState
     {
     }
 
-
+    // Updates the background
     public void update()
     {
         bg.update();
     }
 
-
+    // 
     public void draw( Graphics2D g )
     {
         /**
