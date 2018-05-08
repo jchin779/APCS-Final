@@ -14,7 +14,7 @@ public class GameStateManager
 
     public static final int LEVEL1STATE = 1;
 
-
+    // Constructor
     public GameStateManager()
     {
 
@@ -26,7 +26,7 @@ public class GameStateManager
 
     }
 
-
+    // Sets the state of the game
     public void setState( int state )
     {
         currentState = state;
@@ -34,25 +34,25 @@ public class GameStateManager
 
     }
 
-
+    // Updates the game state
     public void update()
     {
         gameStates.get( currentState ).update();
     }
 
-
+    // Drwas the current state of the game
     public void draw( java.awt.Graphics2D g )
     {
         gameStates.get( currentState ).draw( g );
     }
 
-
+    // Gets if a key is pressed on the current game state
     public void keyPressed( int k )
     {
         gameStates.get( currentState ).keyPressed( k );
     }
 
-
+    // Gets if a key is released on the current game state
     public void keyReleased( int k )
     {
         gameStates.get( currentState ).keyReleased( k );
