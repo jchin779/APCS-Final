@@ -101,6 +101,7 @@ public abstract class MapObject
 
 
     // constructor
+    // @param tm Tile map
     public MapObject( TileMap tm )
     {
         tileMap = tm;
@@ -108,6 +109,8 @@ public abstract class MapObject
     }
 
     // Checks if an object interesects with another
+    // @param o Map Object
+    // @return Returns true if it intersects, else false
     public boolean intersects( MapObject o )
     {
         Rectangle r1 = getRectangle();
@@ -116,12 +119,15 @@ public abstract class MapObject
     }
 
     // Creates a new rectangle
+    // @return Returns a new rectangle
     public Rectangle getRectangle()
     {
         return new Rectangle( (int)x - cwidth, (int)y - cheight, cwidth, cheight );
     }
 
     // Calculates the corners of the map
+    // @param x x value
+    // @param y y value
     public void calculateCorners( double x, double y )
     {
 
@@ -216,36 +222,42 @@ public abstract class MapObject
     }
 
     // Returns x
+    // @return x value
     public int getx()
     {
         return (int)x;
     }
 
     // Returns y
+    // @return y value
     public int gety()
     {
         return (int)y;
     }
 
     // Returns the width
+    // @return width value
     public int getWidth()
     {
         return width;
     }
 
     // Returns the height
+    // @return height value
     public int getHeight()
     {
         return height;
     }
 
     // Returns the collision box width
+    // @return cwidth collision box width
     public int getCWidth()
     {
         return cwidth;
     }
 
     // Returns the collision box height 
+    // @return cheight collision box height
     public int getCHeight()
     {
         return cheight;
@@ -273,36 +285,42 @@ public abstract class MapObject
     }
 
     // Sets the left movement
+    // @param b Boolean
     public void setLeft( boolean b )
     {
         left = b;
     }
 
     // Sets the right movement
+    // @param b Boolean
     public void setRight( boolean b )
     {
         right = b;
     }
 
     // Sets upwards movement
+    // @param b Boolean
     public void setUp( boolean b )
     {
         up = b;
     }
 
     // Sets downwards movement
+    // @param b Boolean
     public void setDown( boolean b )
     {
         down = b;
     }
 
     // Sets jumping
+    // @param b Boolean
     public void setJumping( boolean b )
     {
         jumping = b;
     }
 
     // Checks if something is not on the screen
+    // @return true if on screen, else false
     public boolean notOnScreen()
     {
         return x + xmap + width < 0 || x + xmap - width > GamePanel.WIDTH || y + ymap + height < 0
