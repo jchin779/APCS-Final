@@ -13,6 +13,7 @@ public class Level1State extends GameState
     private Background bg;
 
     // Constructor
+    // @param gsm Game State Manager
     public Level1State( GameStateManager gsm )
     {
         this.gsm = gsm;
@@ -38,6 +39,7 @@ public class Level1State extends GameState
     }
 
     // Draws the background and tile map
+    // @param g Graphics
     public void draw( Graphics2D g )
     {
 
