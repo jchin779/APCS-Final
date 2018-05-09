@@ -23,6 +23,8 @@ public class Background
     private double moveScale;
 
     // Constructor
+    // @param s String name
+    // @param ms Double move scale
     public Background( String s, double ms )
     {
         try
@@ -37,6 +39,8 @@ public class Background
     }
 
     // Sets the position of the game panel
+    // @param x value
+    // @param y value
     public void setPosition( double x, double y )
     {
         this.x = ( x * moveScale ) % GamePanel.WIDTH;
@@ -44,6 +48,8 @@ public class Background
     }
 
     // Sets the two vectors dx and dy
+    // @param dx Double x vector value
+    // @param dy Double y vector value
     public void setVector( double dx, double dy )
     {
         this.dx = dx;
@@ -58,6 +64,7 @@ public class Background
     }
 
     // Draws the background image
+    // @param g Graphics component
     public void draw( Graphics2D g )
     {
         /**
@@ -87,18 +94,21 @@ public class Background
     }
 
     // Returns x
+    // @return x value
     public double getX()
     {
         return x;
     }
 
     // Returns y
+    // @return y value
     public double getY()
     {
         return y;
     }
 
     // Returns the image
+    // @return image Buffered image
     public BufferedImage getImage()
     {
         return image;
