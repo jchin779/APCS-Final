@@ -22,6 +22,7 @@ public class MenuState extends GameState
     private Font font;
 
     // Constructor
+    // @param gsm Game State Manager
     public MenuState( GameStateManager gsm )
     {
         /**
@@ -59,6 +60,7 @@ public class MenuState extends GameState
     }
 
     // Draws the background with a set font and colors
+    // @param g Graphics component
     public void draw( Graphics2D g )
     {
         /**
@@ -108,6 +110,7 @@ public class MenuState extends GameState
     }
 
     // Checks if a key is pressed to navigate the menu
+    // @param k Int value for key
     public void keyPressed( int k )
     {
         if ( k == KeyEvent.VK_ENTER )
