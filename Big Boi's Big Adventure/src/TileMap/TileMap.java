@@ -58,6 +58,7 @@ public class TileMap
     private int numColsToDraw;
 
     // Constructor
+    // @param tileSize Tile Size int
     public TileMap( int tileSize )
     {
         this.tileSize = tileSize;
@@ -67,6 +68,7 @@ public class TileMap
     }
 
     // Loads the tile set and each tile type
+    // @param s String name
     public void loadTiles( String s )
     {
 
@@ -95,6 +97,7 @@ public class TileMap
     }
 
     // Loads the map with a given name
+    // @param s String name
     public void loadMap( String s )
     {
 
@@ -130,36 +133,44 @@ public class TileMap
     }
 
     // Returns the tile size
+    // @return tileSize Tile Size int
     public int getTileSize()
     {
         return tileSize;
     }
 
     // Returns x
+    // @return x value
     public int getx()
     {
         return (int)x;
     }
 
     // Returns y 
+    // @return y value
     public int gety()
     {
         return (int)y;
     }
 
     // Returns width
+    // @return width value
     public int getWidth()
     {
         return width;
     }
 
     // Returns height
+    // @return height value
     public int getHeight()
     {
         return height;
     }
 
     // Returns the type of the tile
+    // @param row Row value
+    // @param col Column value
+    // @return tile type at row, col int
     public int getType( int row, int col )
     {
         int rc = map[row][col];
@@ -169,6 +180,8 @@ public class TileMap
     }
 
     // Sets position of the x and y coordinates and fixes bounds
+    // @param x value
+    // @param y value
     public void setPosition( double x, double y )
     {
 
@@ -196,6 +209,7 @@ public class TileMap
     }
 
     // Draws the tiles 
+    // @param g Graphics component
     public void draw( Graphics2D g )
     {
 
